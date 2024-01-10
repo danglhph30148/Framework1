@@ -11,7 +11,7 @@ export class ProductService {
   apiUrl = 'https://fakestoreapi.com/products'; // khai bao apiUrl
   http = inject(HttpClient); // inject bien http
   constructor() {}
-
+  
   getProductList(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl); //axios.get(apiUrl)
   }
