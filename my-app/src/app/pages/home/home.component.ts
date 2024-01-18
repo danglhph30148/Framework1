@@ -5,24 +5,24 @@ import { ProductCardComponent } from '../../components/product-card/product-card
 import { NgFor } from '@angular/common';
 import { ProductService } from '../../services/product.service'; // import services
 import { Product } from '../../types/Product';
-import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, ProductCardComponent, NgFor, SidebarComponent],
+  imports: [HeaderComponent, FooterComponent, ProductCardComponent, NgFor],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
   productService = inject(ProductService); // inject vao bien
 
-  productList: Product[] = [];
+  ProductList: Product[] = [];
 
   ngOnInit(): void {
     this.productService
       .getProductList()
-      .subscribe((products) => (this.productList = products)); // callApi.then(cb fuc)
+      .subscribe((products) => (this.ProductList = products)); // callApi.then(cb fuc)
   }
   //contruct
 }

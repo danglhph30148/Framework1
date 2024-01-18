@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
   // call api
   apiUrl = 'https://apipro.netlify.app/.netlify/functions/api/product';
-
+  apiAdminUrl = 'https://hoadv-nodejs.vercel.app/api/product';
   http = inject(HttpClient); // inject bien http
   constructor() {}
 

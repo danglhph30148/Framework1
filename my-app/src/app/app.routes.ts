@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/admin/products/products.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { CreateComponent } from './pages/admin/create/create.component';
+import { EditComponent } from './pages/admin/edit/edit.component';
 export const routes: Routes = [
   // route '/' = page Home
   // path, component
@@ -13,7 +14,8 @@ export const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: 'product/create', component: CreateComponent },
-      { path: 'product', component: ProductsComponent }
+      { path: 'product', component: ProductsComponent },
+      { path: 'products/edit/:id', component: EditComponent }
     ],
   },
 ];
